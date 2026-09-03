@@ -6,23 +6,15 @@
   <meta name="description" content="How captions work in Mediasite at UTHSC, and how faculty review them for accuracy.">
   <title>Captions in Mediasite | Faculty Course Design Resources</title>
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Page-specific additions — move into styles.css once stable */
-    .shot{margin:14px 0 0}
-    .shot img{display:block;width:100%;height:auto;border:1px solid #dfe4e9;border-radius:5px}
-    .shot figcaption{font-size:.85rem;color:#5f6873;margin-top:5px}
-    .shot-pair{display:flex;gap:14px;flex-wrap:wrap}
-    .shot-pair > .shot{flex:1 1 260px}
-    summary .auto-note{font-weight:400;opacity:.7}
-  </style>
+  <link rel="stylesheet" href="captions-contrast.css">
 </head>
-<body>
+<body class="page-captions">
 <header class="site-header">
   <div class="wrap">
     <p class="site-kicker">Instructional Design Resource</p>
     <h1>Faculty Course Design Resources</h1>
     <p>Concise guidance, practical examples, and selected resources for faculty developing or revising courses.</p>
-    <p class="meta">Developed and maintained by Liangke Yang · Last updated September 2026</p>
+    <p class="meta">Developed and maintained by Liangke Yang &middot; Last updated September 2026</p>
   </div>
 </header>
 
@@ -153,11 +145,12 @@
         <summary>Quick Check</summary>
         <div class="accordion-content">
           <ul class="quick-check">
-            <li>Does the presentation show a <strong>Captions</strong> label?</li>
-            <li>Have specialized terms, drug names, and personal names been verified?</li>
-            <li>Are speaker names and abbreviations rendered correctly?</li>
-            <li>Were changes saved using <strong>Save</strong> rather than Unpublish?</li>
-            <li>Do captions display correctly when played from the student view?</li>
+            <li>Has the presentation finished processing and moved out of My Drafts?</li>
+            <li>Did the &ldquo;Captioning completed&rdquo; email arrive, or does the red Captions label appear?</li>
+            <li>Have drug names, anatomical terms, and abbreviations been checked?</li>
+            <li>Are personal and institutional names spelled correctly?</li>
+            <li>Were changes saved with <strong>Save</strong> rather than discarded?</li>
+            <li>Do corrected phrases appear when captions are turned on in the player?</li>
           </ul>
         </div>
       </details>
@@ -167,18 +160,24 @@
         <div class="accordion-content">
           <ul class="resource-list">
             <li>
-              <a class="resource-link" href="https://www.w3.org/WAI/media/av/captions/" target="_blank" rel="noopener">
+              <a class="resource-link"
+                 href="https://www.w3.org/WAI/media/av/captions/"
+                 target="_blank" rel="noopener">
                 W3C Web Accessibility Initiative: Captions and Subtitles
               </a>
             </li>
             <li>
-              <a class="resource-link" href="https://dcmp.org/learn/captioningkey" target="_blank" rel="noopener">
+              <a class="resource-link"
+                 href="https://dcmp.org/learn/captioningkey"
+                 target="_blank" rel="noopener">
                 Described and Captioned Media Program: Captioning Key
               </a>
             </li>
             <li>
-              <a class="resource-link" href="https://www.w3.org/TR/WCAG22/#captions-prerecorded" target="_blank" rel="noopener">
-                WCAG 2.2: Captions for Prerecorded Media (Success Criterion 1.2.2)
+              <a class="resource-link"
+                 href="https://www.w3.org/WAI/WCAG22/Understanding/captions-prerecorded"
+                 target="_blank" rel="noopener">
+                WCAG 2.2: Understanding Captions for Prerecorded Media
               </a>
             </li>
           </ul>
@@ -189,7 +188,7 @@
     <p class="disclaimer">
       This independently maintained resource provides general instructional design guidance.
       It does not represent official institutional policy or replace program, accreditation, legal,
-      or accessibility requirements. Mediasite interface elements may change following platform updates.
+      or accessibility requirements.
     </p>
   </article>
 </main>
