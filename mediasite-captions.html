@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="How captions work in Mediasite at UTHSC, and how faculty review them for accuracy.">
+  <title>Captions in Mediasite | Faculty Course Design Resources</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Page-specific additions — move into styles.css once stable */
+    .shot{margin:14px 0 0}
+    .shot img{display:block;width:100%;height:auto;border:1px solid #dfe4e9;border-radius:5px}
+    .shot figcaption{font-size:.85rem;color:#5f6873;margin-top:5px}
+    .shot-pair{display:flex;gap:14px;flex-wrap:wrap}
+    .shot-pair > .shot{flex:1 1 260px}
+    summary .auto-note{font-weight:400;opacity:.7}
+  </style>
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap">
+    <p class="site-kicker">Instructional Design Resource</p>
+    <h1>Faculty Course Design Resources</h1>
+    <p>Concise guidance, practical examples, and selected resources for faculty developing or revising courses.</p>
+    <p class="meta">Developed and maintained by Liangke Yang · Last updated September 2026</p>
+  </div>
+</header>
+
+<main>
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="index.html">Home</a> &rsaquo; Captions in Mediasite
+  </nav>
+
+  <article class="content-panel">
+    <h1>Captions in Mediasite</h1>
+    <p class="page-lead">
+      Captions are generated automatically at UTHSC. You do not request them &mdash; your only task is
+      reviewing them for accuracy.
+    </p>
+
+    <div class="note">
+      <strong>Automatic captions are a starting point, not a finished product:</strong> speech recognition
+      regularly misrenders drug names, anatomy, abbreviations, and personal names. A recording students
+      depend on should be reviewed before the course opens. Plan on a few minutes per video, not a
+      word-by-word proofread.
+    </div>
+
+    <section class="accordion" aria-label="Captioning steps">
+      <details open>
+        <summary>Step 1 &mdash; Upload or record your video</summary>
+        <div class="accordion-content">
+          <p>
+            Sign in to Mediasite and select <strong>Add Presentation</strong>. Choose
+            <strong>Choose File</strong> to upload an existing video, or <strong>In-browser</strong> to
+            record directly. Enter a title, then select <strong>Create and Launch</strong>.
+          </p>
+          <p>
+            Leave <strong>Destination</strong> set to <strong>My Drafts</strong>. Once processing
+            finishes, the presentation moves into your own folder automatically &mdash; no action needed.
+          </p>
+          <div class="shot-pair">
+            <figure class="shot">
+              <img src="images/shot2.png" alt="Add Presentation screen with four options: In-browser, With App, Choose File, and Link.">
+              <figcaption>Choose File to upload; In-browser to record.</figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="images/shot3.png" alt="New Presentation Details dialog with fields for Title, Description, and Destination set to My Drafts.">
+              <figcaption>Title the presentation, then Create and Launch.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+
+      <details>
+        <summary>Step 2 &mdash; Captioning begins automatically <span class="auto-note">(nothing to do)</span></summary>
+        <div class="accordion-content">
+          <p>
+            Open the <strong>Delivery</strong> tab and you will see
+            <em>&ldquo;Captioning is in progress&rdquo;</em> under <strong>Audio Transcriptions</strong>.
+            Captioning is handled by Mediasite Captioning Powered by Vidable and starts on its own.
+            You can close the tab and continue working.
+          </p>
+          <figure class="shot">
+            <img src="images/shot6.png" alt="Delivery tab showing Audio Transcriptions with the message Captioning is in progress, and Edit Captions in the right-hand menu.">
+            <figcaption>Audio Transcriptions confirms captioning is running. <strong>Edit Captions</strong> appears in the right-hand menu.</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details>
+        <summary>Step 3 &mdash; You receive an email when captions are ready <span class="auto-note">(nothing to do)</span></summary>
+        <div class="accordion-content">
+          <p>
+            Mediasite sends a &ldquo;Captioning completed&rdquo; email containing a direct link to the
+            presentation. In <strong>My Presentations</strong>, the video also gains a red
+            <strong>Captions</strong> label.
+          </p>
+          <div class="example bad">
+            <span class="label">Common misreading</span>
+            The red <strong>Captions</strong> label is not an error. It simply indicates that a caption
+            track exists on the presentation.
+          </div>
+          <div class="shot-pair">
+            <figure class="shot">
+              <img src="images/shot8.png" alt="Email from uthsc@mediasite.com with the subject Captioning completed, stating that captions have been successfully received, with a link to the presentation.">
+              <figcaption>Subject line: <em>Captioning completed for &hellip;</em></figcaption>
+            </figure>
+            <figure class="shot">
+              <img src="images/shot7.png" alt="Presentation page showing a green Presentation label and a red Captions label beneath the video player.">
+              <figcaption>Green Presentation and red Captions labels below the player.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </details>
+
+      <details open>
+        <summary>Step 4 &mdash; Review and correct the captions <span class="auto-note">(this is your part)</span></summary>
+        <div class="accordion-content">
+          <p>
+            Open the presentation and select <strong>Edit Captions</strong> in the right-hand menu.
+            Captions appear as timed segments you can edit directly. Use the
+            <strong>Find and Replace</strong> tab to fix a term that recurs throughout the recording,
+            then select <strong>Save</strong>.
+          </p>
+          <div class="example">
+            <span class="label">Where to focus</span>
+            Scan for drug names, anatomical terms, abbreviations, and personal names. These are where
+            speech recognition fails, and where an error changes meaning for students.
+          </div>
+          <div class="example bad">
+            <span class="label">Caution</span>
+            <strong>Save</strong> is at the top right, directly beside a red <strong>Unpublish</strong>
+            button. Unpublish removes captions from the player &mdash; avoid it unless that is your intent.
+          </div>
+          <figure class="shot">
+            <img src="images/shot9.png" alt="Edit Captions editor showing Timed Captions, Transcript, and Find and Replace tabs, timestamped caption segments, the video player, and Save and Unpublish buttons at the top right.">
+            <figcaption>The Edit Captions editor. Find and Replace is the fastest fix for a repeated term.</figcaption>
+          </figure>
+          <p>
+            To confirm your edits are live, play the video and turn captions on from the
+            <strong>CC</strong> menu. Verify that a phrase you corrected now appears as edited &mdash;
+            the menu label continues to read <em>English [Auto-Generated]</em> regardless of your edits,
+            so it is not a reliable indicator.
+          </p>
+          <figure class="shot">
+            <img src="images/shot11.png" alt="Video player with the captions menu open, showing Captions Settings, Captions Off, and English [Auto-Generated].">
+            <figcaption>Confirm in the player, not by the menu label.</figcaption>
+          </figure>
+        </div>
+      </details>
+
+      <details>
+        <summary>Quick Check</summary>
+        <div class="accordion-content">
+          <ul class="quick-check">
+            <li>Does the presentation show a <strong>Captions</strong> label?</li>
+            <li>Have specialized terms, drug names, and personal names been verified?</li>
+            <li>Are speaker names and abbreviations rendered correctly?</li>
+            <li>Were changes saved using <strong>Save</strong> rather than Unpublish?</li>
+            <li>Do captions display correctly when played from the student view?</li>
+          </ul>
+        </div>
+      </details>
+
+      <details>
+        <summary>Additional Resources</summary>
+        <div class="accordion-content">
+          <ul class="resource-list">
+            <li>
+              <a class="resource-link" href="https://www.w3.org/WAI/media/av/captions/" target="_blank" rel="noopener">
+                W3C Web Accessibility Initiative: Captions and Subtitles
+              </a>
+            </li>
+            <li>
+              <a class="resource-link" href="https://dcmp.org/learn/captioningkey" target="_blank" rel="noopener">
+                Described and Captioned Media Program: Captioning Key
+              </a>
+            </li>
+            <li>
+              <a class="resource-link" href="https://www.w3.org/TR/WCAG22/#captions-prerecorded" target="_blank" rel="noopener">
+                WCAG 2.2: Captions for Prerecorded Media (Success Criterion 1.2.2)
+              </a>
+            </li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <p class="disclaimer">
+      This independently maintained resource provides general instructional design guidance.
+      It does not represent official institutional policy or replace program, accreditation, legal,
+      or accessibility requirements. Mediasite interface elements may change following platform updates.
+    </p>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a class="back-link" href="index.html">Back to all topics</a>
+    <span>Maintained by Liangke Yang</span>
+  </div>
+</footer>
+</body>
+</html>
