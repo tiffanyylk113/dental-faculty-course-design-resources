@@ -1,0 +1,287 @@
+/* ========================================================================== 
+   captions-contrast.css
+   Scoped additions for mediasite-captions.html only.
+
+   Requirements:
+     1. Place this file next to styles.css in the repository root.
+     2. Link it AFTER styles.css so these rules win:
+          <link rel="stylesheet" href="styles.css">
+          <link rel="stylesheet" href="captions-contrast.css">
+     3. Add the scoping class to the page:
+          <body class="page-captions">
+
+   Every rule is prefixed with .page-captions, so styles.css and the other
+   pages of the site are completely unaffected.
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   1. Screenshot layout
+   Moved here from the page's former inline <style> block.
+   -------------------------------------------------------------------------- */
+
+.page-captions .shot {
+  margin: 14px 0 0;
+}
+
+.page-captions .shot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 2px solid #6b747e;   /* darker than the site default so the
+                                   screenshot edge separates from the page */
+  border-radius: 5px;
+  background: #fff;
+}
+
+.page-captions .shot figcaption {
+  font-size: .875rem;
+  color: #3d444c;              /* ~9:1 on white, up from ~5.3:1 */
+  margin-top: 6px;
+  line-height: 1.45;
+}
+
+.page-captions .shot-pair {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.page-captions .shot-pair > .shot {
+  flex: 1 1 260px;
+}
+
+.page-captions .auto-note {
+  font-weight: 400;
+  color: #4a525b;              /* replaces opacity, which drops contrast */
+  opacity: 1;
+}
+
+
+/* --------------------------------------------------------------------------
+   2. Body text and headings
+   Push text toward near-black. Grey text at #5f6873 passes AA but is hard
+   work at small sizes; #111418 / #3d444c is comfortable.
+   -------------------------------------------------------------------------- */
+
+.page-captions,
+.page-captions p,
+.page-captions li {
+  color: #111418;
+}
+
+.page-captions h1,
+.page-captions h2,
+.page-captions h3 {
+  color: #0b0e12;
+}
+
+.page-captions .page-lead {
+  color: #1a1d21;
+}
+
+.page-captions .meta,
+.page-captions .disclaimer {
+  color: #3d444c;
+}
+
+.page-captions .site-kicker {
+  color: #2c3238;
+}
+
+
+/* --------------------------------------------------------------------------
+   3. Borders and rules
+   #dfe4e9 is roughly 1.2:1 against white — effectively invisible. WCAG asks
+   for 3:1 on meaningful non-text elements.
+   -------------------------------------------------------------------------- */
+
+.page-captions .content-panel,
+.page-captions .accordion,
+.page-captions details,
+.page-captions .card {
+  border-color: #9aa4ae;
+}
+
+.page-captions hr,
+.page-captions .accordion details + details {
+  border-top-color: #9aa4ae;
+}
+
+
+/* --------------------------------------------------------------------------
+   4. Links
+   Darken, and always underline. Colour alone is not a sufficient signal
+   (WCAG 1.4.1 Use of Color).
+   -------------------------------------------------------------------------- */
+
+.page-captions a {
+  color: #08447a;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.page-captions a:hover,
+.page-captions a:focus {
+  color: #05305a;
+  text-decoration-thickness: 2px;
+}
+
+.page-captions .breadcrumb a,
+.page-captions .back-link,
+.page-captions .resource-link {
+  color: #08447a;
+  text-decoration: underline;
+}
+
+
+/* --------------------------------------------------------------------------
+   5. Callout boxes
+   Thicker, darker left rules; slightly deeper tints so text sits forward.
+   -------------------------------------------------------------------------- */
+
+.page-captions .note {
+  border-left: 5px solid #08447a;
+  background: #e8f0f8;
+  color: #101418;
+}
+
+.page-captions .example {
+  border-left: 5px solid #4a525b;
+  background: #f0f2f4;
+  color: #101418;
+}
+
+.page-captions .example.bad {
+  border-left: 5px solid #a3081f;
+  background: #fbe9ec;
+  color: #101418;
+}
+
+.page-captions .label {
+  font-weight: 700;
+  letter-spacing: .03em;
+  text-transform: uppercase;
+  font-size: .78rem;
+  color: #2c3238;
+}
+
+.page-captions .example.bad .label {
+  color: #8a0619;
+}
+
+
+/* --------------------------------------------------------------------------
+   6. Accordion summaries
+   Make it obvious they are interactive.
+   -------------------------------------------------------------------------- */
+
+.page-captions summary {
+  font-weight: 600;
+  color: #0b0e12;
+  cursor: pointer;
+}
+
+.page-captions summary:hover {
+  background: #eef2f6;
+}
+
+
+/* --------------------------------------------------------------------------
+   7. Keyboard focus
+   The accordion is operated with Tab + Enter. A clearly visible focus ring
+   matters more here than any colour change above.
+   -------------------------------------------------------------------------- */
+
+.page-captions a:focus-visible,
+.page-captions summary:focus-visible,
+.page-captions button:focus-visible {
+  outline: 3px solid #08447a;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+
+/* --------------------------------------------------------------------------
+   8. Quick Check list
+   -------------------------------------------------------------------------- */
+
+.page-captions .quick-check li {
+  color: #111418;
+  line-height: 1.55;
+}
+
+
+/* --------------------------------------------------------------------------
+   9. Opt-in maximum contrast
+   Users who have turned on high contrast at the OS level get near-pure
+   black text and heavier borders. Everyone else is unaffected.
+   -------------------------------------------------------------------------- */
+
+@media (prefers-contrast: more) {
+  .page-captions,
+  .page-captions p,
+  .page-captions li,
+  .page-captions .meta,
+  .page-captions .disclaimer,
+  .page-captions .shot figcaption,
+  .page-captions .auto-note {
+    color: #000;
+  }
+
+  .page-captions .content-panel,
+  .page-captions .accordion,
+  .page-captions details,
+  .page-captions .shot img {
+    border-color: #000;
+  }
+
+  .page-captions .note,
+  .page-captions .example,
+  .page-captions .example.bad {
+    border-left-width: 6px;
+    border-left-color: #000;
+    background: #fff;
+  }
+
+  .page-captions a {
+    color: #00308f;
+    text-decoration-thickness: 2px;
+  }
+}
+
+
+/* --------------------------------------------------------------------------
+   10. Print
+   Flatten tints, keep screenshots on one page.
+   -------------------------------------------------------------------------- */
+
+@media print {
+  .page-captions .site-header,
+  .page-captions .site-footer,
+  .page-captions .breadcrumb {
+    color: #000;
+  }
+
+  .page-captions details {
+    break-inside: avoid;
+  }
+
+  .page-captions details:not([open]) > div {
+    display: block;   /* expand collapsed panels so nothing is lost on paper */
+  }
+
+  .page-captions .shot img {
+    max-height: 2.2in;
+    width: auto;
+    max-width: 100%;
+    border-color: #000;
+  }
+
+  .page-captions .note,
+  .page-captions .example,
+  .page-captions .example.bad {
+    background: #fff;
+    border-left-color: #000;
+  }
+}
